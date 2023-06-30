@@ -1,10 +1,12 @@
 var timerId;
 
-var ans;
-var cnt = 2;
-var c_num = 0;
-var i;
+let c_crt = 0;
 var c_ans = 1;
+var cnt = 1;
+
+const min = 1 ;
+const max = 4 ;
+
 
 
 // // ボックスを表示して、タイマーを開始
@@ -24,47 +26,35 @@ function startQuiz() {
     timerId = setTimeout( out , 10000 );
     // 開始ボタンを無効化
     document.getElementById("btnStart").disabled = true;
-    // 正解を1～4でランダムに決定
 }
 
-// クイズを9問実施
-for(i = 1; i < 9; i++ ) {
-    // 正解を1～4でランダムに決定
-    var min = 1 ;
-    var max = 4 ;
-    // var c_ans = Math.floor( Math.random() * (max + 1 - min) ) + min ;
-    
-    // 
-    function ans(num) {
-        // 引数を解答に代入
-        ans = num;
-        // 
-        if(ans == c_ans) {
-            c_num++;
-            // カウント
-            document.getElementById("countBox").textContent = "正解！" + cnt;
-        }
-        else {
-            // カウント
-            document.getElementById("countBox").textContent = "不正解！" + cnt;
-        }
-        cnt++;
-        // 正解なら正解数をカウント
-    }
-}
 
 function ans(num) {
-    // クイズボックスを消す
-    document.getElementById("quizBox").style.display = "none";
-    // 終了ボックスを表示
-    document.getElementById("endBox").style.display = "block";
-    // タイマーを終了
-    clearTimeout( timerId );
+    // 正解を1～4でランダムに決定
+    let c_ans = 1;
+    c_ans = Math.floor( Math.random() * (max + 1 - min) ) + min ;
 
-    if(ans == c_ans) {
-        c_num++;
+    if(cnt < 10) {
+        cnt++;
+
+        if (num == c_ans) {
+            document.getElementById("countBox").textContent = "現在" + cnt + "問目\n正解！";
+            c_crt++;
+        }
+
+        else {
+            document.getElementById("countBox").textContent = "現在" + cnt + "問目\n不正解！";
+        }
     }
 
+    else {
+        // クイズボックスを消す
+        document.getElementById("quizBox").style.display = "none";
+        // 終了ボックスを表示
+        document.getElementById("endBox").style.display = "block";
+        // タイマーを終了
+        clearTimeout( timerId );
+    }
 }
 
 
