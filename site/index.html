@@ -26,10 +26,10 @@
     <p id="quizBox" style="display: none;">
       制限時間は10秒です。<br />
       あたりの数字はどれ？<br />
-      <input type="button" value="１" id="btnAns1" onclick="ans(1);">
-      <input type="button" value="２" id="btnAns2" onclick="ans(2);">
-      <input type="button" value="３" id="btnAns3" onclick="ans(3);">
-      <input type="button" value="４" id="btnAns4" onclick="ans(4);"><br />
+      <input type="button" value="１" onclick="ans(1);">
+      <input type="button" value="２" onclick="ans(2);">
+      <input type="button" value="３" onclick="ans(3);">
+      <input type="button" value="４" onclick="ans(4);"><br />
     </p>
 
 
@@ -38,7 +38,7 @@
       <input type="button" value="結果を見る" id="btnResult" onclick="result();">
     </p>
 
-    <p id="outBox" style="display: none;">
+    <p id="endBox" style="display: none;">
       終了！<br>
       <input type="button" value="結果を見る" id="btnResult" onclick="result();">
     </p>
