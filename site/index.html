@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>名称未設定</title>
+
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+
+  </head>
+
+  <body>
+
+    <p id="startBox" style="display: block;">
+      <input type="button" value="クイズを始める" id="btnStart" onclick="startQuiz();">
+    </p>
+
+    <p id="countBox" style="display: none;">
+      現在1問目です。<br>
+    </p>
+
+    <p id="quizBox" style="display: none;">
+      制限時間は10秒です。<br />
+      あたりの数字はどれ？<br />
+      <input type="button" value="１" id="btnAns1" onclick="ans(1);">
+      <input type="button" value="２" id="btnAns2" onclick="ans(2);">
+      <input type="button" value="３" id="btnAns3" onclick="ans(3);">
+      <input type="button" value="４" id="btnAns4" onclick="ans(4);"><br />
+    </p>
+
+
+    <p id="outBox" style="display: none;">
+      時間切れ！<br>
+      <input type="button" value="結果を見る" id="btnResult" onclick="result();">
+    </p>
+
+    <p id="outBox" style="display: none;">
+      終了！<br>
+      <input type="button" value="結果を見る" id="btnResult" onclick="result();">
+    </p>
+
+    <p id="resultBox" style="display: none;">
+      結果は？問正解です。<br>
+      <input type="button" value="戻る" id="btnRestart" onclick="restart();">
+    </p>
+
+
+    <script src="js/Script.js"></script>
+
+  </body>
+
+</html>
