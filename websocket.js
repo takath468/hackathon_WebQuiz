@@ -10,9 +10,9 @@ const ejs = require('ejs');
 //httpサーパーのポート設定
 const port = 8000;
 //各ファイルのデータ読み込んでレンダリングをする
-const index = fs.readFileSync('./index.html', 'UTF-8');
-const style = fs.readFileSync('./css/common.css', 'UTF-8');
-const js = fs.readFileSync('./js/Script.js', 'UTF-8');
+const index = fs.readFileSync('./site/index.html', 'UTF-8');
+const style = fs.readFileSync('./site/css/common.css', 'UTF-8');
+const js = fs.readFileSync('./site/js/Script.js', 'UTF-8');
 
 
 //functionの定義
