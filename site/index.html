@@ -16,17 +16,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 
-  </head>
+    <script src="js/Script.js"></script>
 
+  </head>
 
 
 
   <body>
 
     <header>
+
       <h1>
       Web Quiz
       </h1>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">TOP</a></li>
+        </ul>
+      </nav>
+
     </header>
 
 
@@ -35,10 +44,8 @@
 
       <section id="state">
 
-        <p id="stateBox" style="display: none;">
-          制限時間：10秒<br />
-          現在1問目です。<br>
-        </p>
+        プレイヤー名登録<br>
+        名前を入力したら、登録ボタンを押してください。<br>
 
       </section>
 
@@ -46,51 +53,24 @@
 
       <section id="quiz">
 
-        <p id="quizBox" style="display: none;">
-          あたりの数字はどれ？<br />
-        </p>
-
-        <p id="endBox" style="display: none;">
-          終了！<br>
-        </p>
-
-        <p id="outBox" style="display: none;">
-          時間切れ！<br>
-        </p>
-
-        <p id="resultBox" style="display: none;">
-          結果は？問正解です。<br>
-        </p>
+        <form action="quiz.html" method="get" name="name_form">
+          <label for="name_get">プレイヤー名：</label>
+          <input type="text" id="name_get" name="p_name">
+          <!-- ↓onClickイベントを追加 -->
+          <input type="submit" value="登録" onclick="return name_rgt()">
+        </form>
 
       </section>
 
 
 
       <section id="action">
-        <p id="startBox" style="display: block;">
-          <input type="button" value="クイズを始める" id="btnStart" onclick="startQuiz();"><br>
-        </p>
 
-        <p id="answerBox" style="display: none;">
-          <input type="button" value="１" onclick="ans(1);">
-          <input type="button" value="２" onclick="ans(2);">
-          <input type="button" value="３" onclick="ans(3);">
-          <input type="button" value="４" onclick="ans(4);"><br />
-        </p>
-
-        <p id="seeresultBox" style="display: none;">
-          <input type="button" value="結果を見る" id="btnResult" onclick="result();">
-        </p>
-
-        <p id="restartBox" style="display: none;">
-          <input type="button" value="戻る" id="btnRestart" onclick="restart();">
-        </p>
+        
 
       </section>
 
     </main>
-
-    <script src="js/Script.js"></script>
 
   </body>
 

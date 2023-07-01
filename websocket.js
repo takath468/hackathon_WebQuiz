@@ -1,15 +1,16 @@
 'use strict'
 
+//変数の定義
 //各クラスの読み込み
 const http = require('http');
 const fs = require('fs');
 const url = require('url');
 const ejs = require('ejs');
 
-//変数の定義
 //httpサーパーのポート設定
 const port = 8000;
 //各ファイルのデータ読み込んでレンダリングをする
+const chatGtpTemplate = fs.readFileSync('./quizTemplate/template.txt', 'UTF-8');
 const index = fs.readFileSync('./site/index.html', 'UTF-8');
 const style = fs.readFileSync('./site/css/common.css', 'UTF-8');
 const js = fs.readFileSync('./site/js/Script.js', 'UTF-8');
