@@ -1,12 +1,12 @@
 'use strict'
 
+//変数の定義
 //各クラスの読み込み
 const http = require('http');
 const fs = require('fs');
 const url = require('url');
 const ejs = require('ejs');
 
-//変数の定義
 //httpサーパーのポート設定
 const port = 8000;
 //各ファイルのデータ読み込んでレンダリングをする
