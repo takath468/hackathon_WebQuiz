@@ -8,8 +8,67 @@
 
 /* タグ：要素セレクタ(タイプセレクタ) */
 body{
-  font-family: sans-serif;/* デフォルトのフォント指定 */
+  font-family: 'メイリオ','Meiryo','Hiragino Kaku Gothic Pro',sans-serif;/* デフォルトのフォント指定 */
 }
+
+header{
+  position: relative;
+  width: 100%;
+  height: 80px;
+  background-color: #999;
+}
+header h1{
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  font-weight: normal;
+  line-height: 1.0;
+}
+
+main{
+  width: 800px;
+  margin: 0 auto 0 auto;
+}
+main section{
+  margin: 0 0 10px 0;
+  padding: 20px 0 0 20px;
+}
+main section#state{
+  height: 80px;
+  background-color: #ddd;
+}
+main section#quiz{
+  height: 260px;
+  background-color: #bbb;
+}
+main section#action{
+  height: 100px;
+  background-color: #ddd;
+}
+main section#action p#answerBox{
+  text-align: center;
+}
+main section#action p#startBox{
+  text-align: right;
+  padding: 0 50px 0 0;
+}
+main section#action p#seeresultBox{
+  text-align: right;
+  padding: 0 50px 0 0;
+}
+main section#action p#answerBox input{
+  width: 40px;
+  height: 40px;
+  margin: 0 15px 0 15px;
+  font-size: 1.6rem;
+}
+
+footer{
+  text-align: center;
+}
+
 
 
 
