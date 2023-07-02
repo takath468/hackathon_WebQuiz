@@ -25,7 +25,6 @@ const q9 = "問題：\n地球の自転周期はおおよそ何時間ですか？
 const q10 = "問題：\n次のうち、太陽系の中で最も内側に位置する惑星はどれでしょうか？\n\n選択肢：\n1. 地球\n2. 金星\n3. 火星\n4. 木星\n正解: 2";
 
 
-
 // 登録ボタンの処理
 function name_rgt() {
     rgt_name = document.getElementById("name_get").value;
