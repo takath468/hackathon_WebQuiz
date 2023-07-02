@@ -13,7 +13,6 @@ const min = 1 ;
 const max = 4 ;
 
 
-
 // 登録ボタンの処理
 function name_rgt() {
     rgt_name = document.getElementById("name_get").value;
