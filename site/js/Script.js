@@ -66,7 +66,7 @@ function startQuiz() {
     document.getElementById("stateBox").style.display = "block";
     // 1問目の問題文を取得、quizBoxの中身を書き換え
     // 正解の番号を取得、c_ansに代入
-    switch (cut){
+    switch (cnt){
         case 1:
             document.getElementById("quizBox").innerHTML = q1;
             c_ans = 2;
