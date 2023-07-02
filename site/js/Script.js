@@ -66,48 +66,9 @@ function startQuiz() {
     document.getElementById("stateBox").style.display = "block";
     // 1問目の問題文を取得、quizBoxの中身を書き換え
     // 正解の番号を取得、c_ansに代入
-    switch (cut){
-        case 1:
-            document.getElementById("quizBox").innerHTML = q1;
-            c_ans = 2;
-            break;
-        case 2:
-            document.getElementById("quizBox").innerHTML = q2;
-            c_ans = 1;
-            break;
-        case 3:
-            document.getElementById("quizBox").innerHTML = q3;
-            c_ans = 2;
-            break;
-        case 4:
-            document.getElementById("quizBox").innerHTML = q4;
-            c_ans = 4;
-            break;
-        case 5:
-            document.getElementById("quizBox").innerHTML = q5;
-            c_ans = 3;
-            break;
-        case 6:
-            document.getElementById("quizBox").innerHTML = q6;
-            c_ans = 2;
-            break;
-        case 7:
-            document.getElementById("quizBox").innerHTML = q7;
-            c_ans = 4;
-            break;
-        case 8:
-            document.getElementById("quizBox").innerHTML = q8;
-            c_ans = 3;
-            break;
-        case 9:
-            document.getElementById("quizBox").innerHTML = q9;
-            c_ans = 2;
-            break;
-        case 10:
-            document.getElementById("quizBox").innerHTML = q10;
-            c_ans = 2;
-            break;
-    }
+    document.getElementById("quizBox").innerHTML = q1;
+    c_ans = 2;
+
     document.getElementById("quizBox").style.display = "block";
     // 解答ボックスを表示
     document.getElementById("answerBox").style.display = "block";
@@ -127,6 +88,44 @@ function ans(num) {
     // 現在が10問目未満
     if(cnt < 10) {
         cnt++;
+        switch (cnt){
+            case 2:
+                document.getElementById("quizBox").innerHTML = q2;
+                c_ans = 1;
+                break;
+            case 3:
+                document.getElementById("quizBox").innerHTML = q3;
+                c_ans = 2;
+                break;
+            case 4:
+                document.getElementById("quizBox").innerHTML = q4;
+                c_ans = 4;
+                break;
+            case 5:
+                document.getElementById("quizBox").innerHTML = q5;
+                c_ans = 3;
+                break;
+            case 6:
+                document.getElementById("quizBox").innerHTML = q6;
+                c_ans = 2;
+                break;
+            case 7:
+                document.getElementById("quizBox").innerHTML = q7;
+                c_ans = 4;
+                break;
+            case 8:
+                document.getElementById("quizBox").innerHTML = q8;
+                c_ans = 3;
+                break;
+            case 9:
+                document.getElementById("quizBox").innerHTML = q9;
+                c_ans = 2;
+                break;
+            case 10:
+                document.getElementById("quizBox").innerHTML = q10;
+                c_ans = 2;
+                break;
+        }
         // 正解の場合→正解表示＆正解数カウント＆現在何問目か表示
         if (num == c_ans) {
             document.getElementById("stateBox").innerHTML = "制限時間：10秒<br>現在" + cnt + "/10問目<br>正解！";
