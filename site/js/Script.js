@@ -36,6 +36,12 @@ const params = new URLSearchParams(window.location.search);
 // quiz.htmlのプレイヤー名
 let p_name = params.get("rgt_name");
 
+// 登録名の反映
+document.getElementById("firstBox").innerHTML = p_name + "さんようこそ！<br>クイズを始めるには右下のボタンを押してください。<br>";
+// 登録名の表示
+document.getElementById("firstBox").style.display = "block";
+
+
 
 
 // 始めるボタンの処理
